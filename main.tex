@@ -275,7 +275,7 @@ and the biased empirical MMD can be computed via
 \end{equation}
 which is the sum of two V-statistics and a sample average. An unbiased estimate can be obtained by exchanging the V-statistics for U-statistics
 \begin{equation}
-    \widehat{\mathrm{MMD}}_{U}^{2} = \frac{1}{{N_{x}\choose 2}} \sum_{i = 1}^{N_{x}} \sum_{i \neq i'}^{N_{x}} k\left(x_{i}, x_{i'}\right)+\frac{1}{{N_{y}\choose 2}} \sum_{j = 1}^{N_{y}} \sum_{j \neq j'}^{N_{y}} k\left(y_{j}, y_{j'}\right)-\frac{2}{N_{x}N_{y}} \sum_{i = 1}^{N_{x}} \sum_{j = 1}^{N_{y}} k\left(x_{i}, y_{j}\right)
+    \widehat{\mathrm{MMD}}_{U}^{2} = \frac{1}{N_{x}(N_{x}-1)} \sum_{i = 1}^{N_{x}} \sum_{i \neq i'}^{N_{x}} k\left(x_{i}, x_{i'}\right)+\frac{1}{N_{y}(N_{y}-1)} \sum_{j = 1}^{N_{y}} \sum_{j \neq j'}^{N_{y}} k\left(y_{j}, y_{j'}\right)-\frac{2}{N_{x}N_{y}} \sum_{i = 1}^{N_{x}} \sum_{j = 1}^{N_{y}} k\left(x_{i}, y_{j}\right)
     \label{eq:mmd_unbiased}
 \end{equation}
 When $N_{x}=N_{y}=N$, \eqref{eq:mmd_biased} and \eqref{eq:mmd_unbiased} can be written as one-sample V- and U-statistics, respectively
